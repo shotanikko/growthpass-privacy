@@ -1,80 +1,221 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>プライバシーポリシー - GrowthPass</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowthPath — Privacy Policy</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Noto Sans JP", sans-serif;
-      background: #0f0f0f;
-      color: #e0e0e0;
-      line-height: 1.8;
-      padding: 40px 20px 80px;
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --accent: #5ba9e0;
+      --border: #e5e5e5;
     }
-    .container { max-width: 680px; margin: 0 auto; }
-    h1 { font-size: 24px; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
-    .meta { font-size: 12px; color: #666; margin-bottom: 40px; }
-    .meta p { margin-bottom: 2px; }
-    h2 { font-size: 15px; font-weight: 600; color: #ffffff; margin-top: 36px; margin-bottom: 10px; }
-    p { font-size: 14px; color: #aaa; margin-bottom: 10px; }
-    ul { padding-left: 20px; margin-bottom: 10px; }
-    ul li { font-size: 14px; color: #aaa; margin-bottom: 6px; }
-    hr { border: none; border-top: 1px solid #222; margin: 40px 0; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+                   "Yu Gothic", Meiryo, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    h1 { font-size: 24px; margin: 16px 0 4px; }
+    h2 { font-size: 17px; margin: 28px 0 8px; }
+    h3 { font-size: 15px; margin: 16px 0 6px; color: var(--muted); }
+    p, li { margin: 6px 0; }
+    ul { padding-left: 22px; }
+    .meta { color: var(--muted); font-size: 13px; margin: 4px 0; }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .lang-switch button {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    section { display: none; }
+    section.active { display: block; }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <div class="lang-switch">
+    <button id="btn-en" onclick="setLang('en')">English</button>
+    <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+  </div>
+
+  <!-- ───────── English ───────── -->
+  <section id="lang-en">
+    <h1>Privacy Policy</h1>
+    <p class="meta">App: GrowthPath</p>
+    <p class="meta">Developer: GrowthPath</p>
+    <p class="meta">Last updated: June 11, 2026</p>
+
+    <h2>1. Introduction</h2>
+    <p>Thank you for using "GrowthPath" (the "App"). This Privacy Policy explains how the App handles your information.</p>
+
+    <h2>2. Information stored on your device</h2>
+    <p>The App stores the following information only on your device. None of this information is uploaded to a cloud server.</p>
+    <ul>
+      <li>Your child's nickname and birthday (multiple profiles supported)</li>
+      <li>Photos and videos you capture or select from your gallery</li>
+      <li>Location (acquired only at capture time, and only when the location pin is enabled)</li>
+      <li>Recording metadata such as day count, date, event labels, and collections</li>
+      <li>Burn-in design settings (font, color, position, template)</li>
+    </ul>
+
+    <h2>3. Purpose of use</h2>
+    <p>Information stored on your device is used only for the following purposes:</p>
+    <ul>
+      <li>To overlay day count, date, location, and event information on photos and videos</li>
+      <li>To manage the birthday as a baseline for month/day age calculation</li>
+      <li>To group and display your child's growth records within the App</li>
+    </ul>
+
+    <h2>4. Data sent to external services</h2>
+    <p>The App sends the following limited data to external services. Your photos, videos, and your child's personal information are never uploaded.</p>
+
+    <h3>(a) Firebase Analytics (Google)</h3>
+    <p>Anonymous usage statistics (screen transitions, feature usage counts, etc.) are collected to help improve the service. No personally identifying information is sent.</p>
+
+    <h3>(b) Google AdMob (ads)</h3>
+    <p>On the free plan, banner ads and a full-screen ad (every other save) are displayed. An anonymous advertising identifier may be used to deliver ads. On iOS 14.5 and later, the App requests App Tracking Transparency permission before personalized ads can be served; if you decline, only non-personalized ads will be shown. Subscribing to the Premium plan hides all ads.</p>
+
+    <h3>(c) In-app review prompt</h3>
+    <p>After you have saved enough photos to be considered engaged with the App, the App may use Google Play's In-App Review API (Android) or Apple's StoreKit ReviewController (iOS) to ask you to rate the App. The review API does not transmit any personal data — only the system-level rating you provide is sent to the respective store.</p>
+
+    <h2>5. In-app purchases</h2>
+    <p>The App offers a Premium plan (auto-renewing monthly subscription). Premium hides ads and also hides the GrowthPath watermark burned into photos and videos. Purchases and payment details are managed by Google Play (Android) / App Store (iOS); the App developer does not receive credit card numbers or other payment details. You can cancel the subscription at any time from your Google Play or App Store account settings.</p>
+
+    <h2>6. Sharing with third parties</h2>
+    <p>The App never provides, sells, or shares your photos, videos, or your child's personal information with third parties.</p>
+
+    <h2>7. Deleting data</h2>
+    <p>Uninstalling the App from your device deletes all App-related data on your device. Anonymous statistics already sent to Firebase are handled according to Google's data retention policies.</p>
+
+    <h2>8. Handling of location data</h2>
+    <p>Location data is acquired only when the location pin on the camera screen is enabled. The acquired location is stored only on your device as photo metadata and is never sent to external servers.</p>
+
+    <h2>9. Children's privacy</h2>
+    <p>This App is intended to record a baby's or child's growth. It is designed to be managed and used by a parent or guardian. Photos, videos, or personal information of a child are never sent to any external service.</p>
+
+    <h2>10. Changes to this Privacy Policy</h2>
+    <p>This Privacy Policy may be updated without prior notice in response to legal changes or App feature changes. Please check this page for the latest policy.</p>
+
+    <h2>11. Contact</h2>
+    <p>For questions about this Privacy Policy, please contact us at <a href="mailto:omuka.customercenter@gmail.com">omuka.customercenter@gmail.com</a>.</p>
+  </section>
+
+  <!-- ───────── 日本語 ───────── -->
+  <section id="lang-ja">
     <h1>プライバシーポリシー</h1>
-    <div class="meta">
-      <p>アプリ名: GrowthPass</p>
-      <p>開発者: GrowthPass Developer</p>
-      <p>最終更新日: 2026年4月12日</p>
-    </div>
+    <p class="meta">アプリ名: GrowthPath</p>
+    <p class="meta">開発者: GrowthPath</p>
+    <p class="meta">最終更新日: 2026年6月11日</p>
 
     <h2>1. はじめに</h2>
-    <p>本アプリ「GrowthPass」をご利用いただき、ありがとうございます。本プライバシーポリシーは、本アプリにおける個人情報の取り扱いについて説明するものです。</p>
+    <p>本アプリ「GrowthPath」（以下「本アプリ」）をご利用いただき、ありがとうございます。本プライバシーポリシーは、本アプリにおける情報の取り扱いについて説明するものです。</p>
 
-    <h2>2. 収集する情報</h2>
-    <p>本アプリは、以下の情報をお客様の端末内にのみ保存します：</p>
+    <h2>2. 端末内に保存される情報</h2>
+    <p>本アプリは、以下の情報をお客様の端末内にのみ保存します。これらの情報がクラウドサーバーへアップロードされることはありません。</p>
     <ul>
-      <li>赤ちゃんのニックネームと誕生日</li>
+      <li>お子様のニックネーム・誕生日（複数登録可）</li>
       <li>お客様が撮影またはアルバムから選択した写真・動画</li>
       <li>位置情報（位置情報ピンをONにした場合のみ、撮影時に一時取得）</li>
+      <li>日齢・日付・イベントラベル・コレクションなどの記録メタデータ</li>
+      <li>焼き込みデザインの設定（フォント・色・位置・テンプレート）</li>
     </ul>
 
     <h2>3. 情報の利用目的</h2>
-    <p>収集した情報は、以下の目的のみに使用します：</p>
+    <p>端末内に保存された情報は、以下の目的のみに使用します：</p>
     <ul>
-      <li>写真・動画への月齢・場所情報のオーバーレイ表示</li>
-      <li>月齢計算の基準としての誕生日管理</li>
-      <li>アプリ内での思い出アルバムの表示</li>
+      <li>写真・動画への日齢・日付・場所・イベント情報のオーバーレイ表示</li>
+      <li>月齢・日齢計算の基準としての誕生日管理</li>
+      <li>アプリ内でのお子様の成長記録の整理・閲覧</li>
     </ul>
 
-    <h2>4. データの保存と外部送信について</h2>
-    <p>本アプリが収集するすべての情報は、お使いの端末内にのみ保存されます。外部サーバー・クラウドサービス・第三者への送信は一切行いません。広告の表示もデータの収集も行いません。</p>
+    <h2>4. 外部サービスへのデータ送信について</h2>
+    <p>本アプリは、以下の限定的なデータを外部サービスに送信します。お客様の写真・動画・お子様の個人情報がアップロードされることは一切ありません。</p>
 
-    <h2>5. 第三者への提供</h2>
-    <p>本アプリは、お客様の情報を第三者に提供・販売・共有することは一切ありません。</p>
+    <h3>(a) Firebase Analytics（Google）</h3>
+    <p>アプリの利用統計（画面遷移、機能の使用回数など）を匿名で収集し、サービス改善に利用します。個人を特定する情報は送信されません。</p>
 
-    <h2>6. データの削除</h2>
-    <p>お使いの端末からアプリを削除することで、本アプリに関連するすべてのデータが削除されます。</p>
+    <h3>(b) Google AdMob（広告）</h3>
+    <p>無料プランで利用中、画面の一部にバナー広告と、写真保存時に全画面広告（2回に1回）が表示されます。広告配信のために匿名の広告識別子が使用される場合があります。iOS 14.5 以降では、パーソナライズされた広告を表示する前にアプリのトラッキング許諾（App Tracking Transparency）を確認します。許可しない場合は、非パーソナライズ広告のみが表示されます。プレミアムプランを購入すると、広告は表示されなくなります。</p>
 
-    <h2>7. 位置情報の取り扱い</h2>
-    <p>位置情報は、カメラ画面の位置情報ピンをONにした場合のみ取得します。取得した位置情報は撮影した写真のメタデータとして端末内に保存されるだけで、外部には送信されません。</p>
+    <h3>(c) アプリレビューの依頼</h3>
+    <p>お客様がアプリを十分にご利用いただいた段階で、Google Play の In-App Review API（Android）または Apple StoreKit ReviewController（iOS）を利用してアプリ評価のお願いを表示することがあります。本機能では個人情報は送信されず、お客様が入力された評価のみが各ストアに送信されます。</p>
 
-    <h2>8. お子様のプライバシー</h2>
-    <p>本アプリは赤ちゃん・お子様の成長記録を目的としたアプリです。保護者の方が管理・使用することを前提としており、収集したお子様の情報を外部に送信することは一切ありません。</p>
+    <h2>5. アプリ内購入について</h2>
+    <p>本アプリは「プレミアムプラン」（月額自動更新）を提供しています。プレミアムプランをご利用いただくと、広告の非表示に加え、写真・動画に焼き込まれる GrowthPath のウォーターマークも非表示になります。購入処理および決済情報は Google Play（Android）/ App Store（iOS）が管理し、本アプリ開発者がクレジットカード番号などの決済情報を取得することはありません。Google Play または App Store のアカウント設定からいつでも解約できます。</p>
 
-    <h2>9. プライバシーポリシーの変更</h2>
+    <h2>6. 第三者への提供</h2>
+    <p>本アプリは、お客様の写真・動画・お子様の個人情報を第三者に提供・販売・共有することは一切ありません。</p>
+
+    <h2>7. データの削除</h2>
+    <p>お使いの端末からアプリを削除することで、本アプリに関連する端末内のすべてのデータが削除されます。Firebase に送信済みの匿名統計情報は、Google のデータ保持ポリシーに従って取り扱われます。</p>
+
+    <h2>8. 位置情報の取り扱い</h2>
+    <p>位置情報は、カメラ画面の位置情報ピンをONにした場合のみ取得します。取得した位置情報は撮影した写真のメタデータとして端末内にのみ保存され、外部サーバーには送信されません。</p>
+
+    <h2>9. お子様のプライバシー</h2>
+    <p>本アプリは赤ちゃん・お子様の成長記録を目的としたアプリです。保護者の方が管理・使用することを前提としており、お子様の写真・動画・個人情報を外部に送信することは一切ありません。</p>
+
+    <h2>10. プライバシーポリシーの変更</h2>
     <p>本プライバシーポリシーは、法令の改正やアプリの機能変更に伴い、予告なく改定される場合があります。最新のポリシーは本ページでご確認ください。</p>
 
-    <h2>10. お問い合わせ</h2>
-    <p>本プライバシーポリシーに関するご質問は、アプリストアのサポートページよりお問い合わせください。</p>
+    <h2>11. お問い合わせ</h2>
+    <p>本プライバシーポリシーに関するご質問は、<a href="mailto:omuka.customercenter@gmail.com">omuka.customercenter@gmail.com</a> までご連絡ください。</p>
+  </section>
 
-    <hr />
-    <p style="font-size:12px; color:#444; text-align:center;">© 2026 GrowthPass Developer. All rights reserved.</p>
-  </div>
+  <footer>
+    © 2026 GrowthPath
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('lang-en').classList.remove('active');
+      document.getElementById('lang-ja').classList.remove('active');
+      document.getElementById('btn-en').classList.remove('active');
+      document.getElementById('btn-ja').classList.remove('active');
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    (function () {
+      let saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      const initial = saved
+        || (navigator.language && navigator.language.startsWith('ja') ? 'ja' : 'en');
+      setLang(initial);
+    })();
+  </script>
 </body>
 </html>
