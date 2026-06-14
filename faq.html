@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GrowthPath — FAQ</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1a1a1a;
+      --muted: #666;
+      --accent: #5ba9e0;
+      --border: #e5e5e5;
+      --hover: #f8f8f8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN",
+                   "Yu Gothic", Meiryo, sans-serif;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 24px 20px 64px;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+    h1 { font-size: 24px; margin: 16px 0 4px; }
+    h2 { font-size: 17px; margin: 28px 0 8px; color: var(--accent); }
+    p { margin: 6px 0; }
+    .meta { color: var(--muted); font-size: 13px; margin: 4px 0; }
+    .lang-switch {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+    }
+    .lang-switch button {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 14px;
+      border-radius: 16px;
+      cursor: pointer;
+      font-size: 13px;
+    }
+    .lang-switch button.active {
+      background: var(--accent);
+      color: white;
+      border-color: var(--accent);
+    }
+    section { display: none; }
+    section.active { display: block; }
+    details {
+      margin: 8px 0;
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--bg);
+    }
+    details:hover { background: var(--hover); }
+    details[open] { background: var(--hover); }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+      position: relative;
+      padding-right: 24px;
+    }
+    summary::-webkit-details-marker { display: none; }
+    summary::after {
+      content: "+";
+      position: absolute;
+      right: 4px;
+      top: 0;
+      font-size: 20px;
+      color: var(--muted);
+      transition: transform 0.2s;
+    }
+    details[open] summary::after { content: "−"; }
+    details > *:not(summary) { margin-top: 10px; }
+    a { color: var(--accent); }
+    .nav-links {
+      margin: 16px 0;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .nav-links a { margin-right: 12px; }
+    footer {
+      margin-top: 48px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="lang-switch">
+    <button id="btn-en" onclick="setLang('en')">English</button>
+    <button id="btn-ja" onclick="setLang('ja')">日本語</button>
+  </div>
+
+  <!-- ───────── English ───────── -->
+  <section id="lang-en">
+    <h1>FAQ</h1>
+    <p class="meta">App: GrowthPath</p>
+    <p class="nav-links">
+      <a href="index.html">← Privacy Policy</a>
+    </p>
+
+    <h2>About the App</h2>
+
+    <details>
+      <summary>What is GrowthPath?</summary>
+      <p>GrowthPath is a personal photo diary that captures your child's daily growth by burning the day count, date, location, and event name into each photo. It's designed as a creative tool — unlike family-sharing apps, every photo is treated as a finished piece of memory.</p>
+    </details>
+
+    <details>
+      <summary>Is it free?</summary>
+      <p>GrowthPath is free to download and use. The free plan shows banner ads and adds a "GrowthPath" watermark to your photos. The Premium plan (¥300/month) hides both ads and the watermark.</p>
+    </details>
+
+    <details>
+      <summary>What devices and OS versions are supported?</summary>
+      <p>Android 7.0 (API 24) and later. iOS support is in preparation and will be available soon. Requires roughly 250 MB of free storage.</p>
+    </details>
+
+    <h2>Photos & Data</h2>
+
+    <details>
+      <summary>Are my photos uploaded to the cloud?</summary>
+      <p>No. All photos, videos, and your child's profile information are stored only on your device. Nothing is uploaded to external servers. See our <a href="index.html">Privacy Policy</a> for details.</p>
+    </details>
+
+    <details>
+      <summary>How do I back up my photos?</summary>
+      <p>Currently, GrowthPath does not include built-in cloud backup. We strongly recommend regularly backing up via Google Photos, iCloud, or your phone's local backup. Photos saved via GrowthPath are also automatically added to your device's photo library, so they will be included in any system-level backup.</p>
+      <p>(Built-in cloud backup is planned as a Premium feature in a future release.)</p>
+    </details>
+
+    <details>
+      <summary>What happens to my data if I switch phones?</summary>
+      <p>Because all data is stored on your device, photos and profiles do not automatically transfer to a new phone. Before switching, make sure your photos are backed up to Google Photos / iCloud (or another cloud service). The GrowthPath app itself can be reinstalled on the new phone, but your saved photos and child profiles will need to be re-imported.</p>
+      <p>An active Premium subscription will automatically restore on the new device once you sign in with the same Google / Apple account.</p>
+    </details>
+
+    <details>
+      <summary>How do I delete all my data?</summary>
+      <p>Uninstalling GrowthPath deletes all in-app data. To be thorough, before uninstalling go to <strong>Settings → Apps → GrowthPath → Storage → Clear storage</strong> to remove all cached profiles and preferences. Photos saved to your device's photo library are not deleted by this action — delete them separately from your photo library if desired.</p>
+    </details>
+
+    <h2>Premium Plan</h2>
+
+    <details>
+      <summary>What does the Premium plan include?</summary>
+      <p>Premium hides all banner ads and the full-screen ad shown when saving, and removes the "GrowthPath" watermark from your photos and videos. Premium also helps support an independent developer.</p>
+    </details>
+
+    <details>
+      <summary>How do I cancel my Premium subscription?</summary>
+      <p>You can cancel directly from inside GrowthPath. Open <strong>Settings → Current plan → Cancel subscription</strong>. This opens the Google Play / App Store subscription manager where you can cancel.</p>
+      <p>Alternatively, open Google Play / App Store → Subscriptions → GrowthPath → Cancel.</p>
+      <p>Your Premium benefits remain active until the end of your current billing period.</p>
+    </details>
+
+    <details>
+      <summary>I cancelled but the app still shows Premium. Why?</summary>
+      <p>Cancellation only takes effect at the end of your current billing period. Until then, Premium benefits remain. Once the period ends, GrowthPath automatically detects the change at next launch and reverts to the free plan.</p>
+    </details>
+
+    <details>
+      <summary>I purchased Premium on another device. How do I restore it?</summary>
+      <p>Open <strong>Settings → Current plan → Restore from another device or reinstall</strong>. Make sure you are signed in with the same Google / Apple account used for the original purchase.</p>
+    </details>
+
+    <h2>Features</h2>
+
+    <details>
+      <summary>Can I record multiple children?</summary>
+      <p>Yes. GrowthPath supports up to 5 child profiles (e.g., siblings). Each profile has its own birthday, photos, and album.</p>
+    </details>
+
+    <details>
+      <summary>Can I import photos taken outside GrowthPath?</summary>
+      <p>Yes. From the home screen, tap "From gallery" to import any photo or video from your device's library. The same burn-in design will be applied.</p>
+    </details>
+
+    <details>
+      <summary>How do I share photos?</summary>
+      <p>Open a photo from the album, tap the share icon, and choose your destination (Instagram Stories, X, Messages, etc.). The photo is shared with the burn-in design intact.</p>
+    </details>
+
+    <h2>Troubleshooting</h2>
+
+    <details>
+      <summary>The camera doesn't work or shows a black screen.</summary>
+      <p>Make sure you've granted GrowthPath camera permission: <strong>Settings → Apps → GrowthPath → Permissions → Camera → Allow</strong>. If that doesn't help, restart the app or your phone.</p>
+    </details>
+
+    <details>
+      <summary>The app crashes when I try to save.</summary>
+      <p>This is usually caused by low storage. Free up at least 500 MB on your device and try again. If the issue persists, please contact support.</p>
+    </details>
+
+    <details>
+      <summary>The UI is in Japanese but I want English (or vice versa).</summary>
+      <p>GrowthPath follows your device's language setting. To switch, change your device language: <strong>Settings → System → Languages → set English (or 日本語) at the top</strong>, then restart GrowthPath.</p>
+    </details>
+
+    <h2>Contact</h2>
+
+    <details>
+      <summary>I have a question not covered here.</summary>
+      <p>Please contact us at <a href="mailto:omuka.customercenter@gmail.com">omuka.customercenter@gmail.com</a>. We'll do our best to respond within a few business days.</p>
+    </details>
+  </section>
+
+  <!-- ───────── 日本語 ───────── -->
+  <section id="lang-ja">
+    <h1>よくある質問</h1>
+    <p class="meta">アプリ名: GrowthPath</p>
+    <p class="nav-links">
+      <a href="index.html">← プライバシーポリシー</a>
+    </p>
+
+    <h2>アプリについて</h2>
+
+    <details>
+      <summary>GrowthPath はどんなアプリ?</summary>
+      <p>GrowthPath は、お子様の毎日の成長を「写真の作品」として残す個人向け育児フォトアプリです。日齢・日付・場所・イベント名を写真に焼き付けるのが最大の特徴で、「みてね」のような家族共有アプリとは異なり、自分だけの作品アルバムとして使えます。</p>
+    </details>
+
+    <details>
+      <summary>無料で使えますか?</summary>
+      <p>はい、無料でダウンロード・利用できます。無料プランではバナー広告と写真への「GrowthPath」ウォーターマークが表示されます。プレミアムプラン (月額 ¥300) に登録すると、広告とウォーターマークが両方非表示になります。</p>
+    </details>
+
+    <details>
+      <summary>対応端末・OS バージョンは?</summary>
+      <p>Android 7.0 (API 24) 以降。iOS 版は準備中で、近日リリース予定です。空き容量は 250 MB 程度が必要です。</p>
+    </details>
+
+    <h2>写真とデータ</h2>
+
+    <details>
+      <summary>写真はクラウドにアップロードされる?</summary>
+      <p>いいえ。すべての写真・動画・お子様のプロフィール情報はお使いの端末内にのみ保存され、外部サーバーにはアップロードされません。詳しくは <a href="index.html">プライバシーポリシー</a> をご覧ください。</p>
+    </details>
+
+    <details>
+      <summary>写真をバックアップしたい</summary>
+      <p>現在、GrowthPath には端末内のクラウドバックアップ機能は搭載していません。Google フォト・iCloud・端末標準のバックアップ機能で定期的にバックアップすることを強くおすすめします。GrowthPath で保存した写真は端末の写真ライブラリにも自動保存されるので、システムレベルのバックアップにも含まれます。</p>
+      <p>(将来のアップデートで、プレミアム機能としてクラウドバックアップを追加予定です。)</p>
+    </details>
+
+    <details>
+      <summary>機種変更したら写真はどうなる?</summary>
+      <p>データは端末内のみに保存されるため、新しい端末には自動では引き継がれません。機種変更前に、Google フォト・iCloud などのクラウドサービスへの写真バックアップを必ず行ってください。新端末で GrowthPath を再インストールできますが、保存済み写真とお子様プロフィールは再度インポートが必要です。</p>
+      <p>プレミアムプラン加入中の場合、同じ Google / Apple アカウントでログインすれば、新端末でも自動で復元されます。</p>
+    </details>
+
+    <details>
+      <summary>すべてのデータを削除したい</summary>
+      <p>アプリをアンインストールすると、アプリ内のすべてのデータが削除されます。確実にやるには、<strong>設定 → アプリ → GrowthPath → ストレージとキャッシュ → ストレージを削除</strong> でキャッシュとプロフィール設定もまとめて削除してください。端末の写真ライブラリに保存された写真は、この操作では削除されません。必要に応じて写真ライブラリから個別に削除してください。</p>
+    </details>
+
+    <h2>プレミアムプラン</h2>
+
+    <details>
+      <summary>プレミアムプランの特典は?</summary>
+      <p>バナー広告・保存時の全画面広告すべてが非表示になり、写真・動画から「GrowthPath」のウォーターマークも消えます。個人開発者の応援にもなります。</p>
+    </details>
+
+    <details>
+      <summary>プレミアムプランの解約方法は?</summary>
+      <p>GrowthPath アプリ内から直接解約できます。<strong>設定 → 現在のプラン → 解約する</strong> をタップすると、Google Play / App Store の定期購入管理画面が開きます。</p>
+      <p>または、Google Play / App Store → 定期購入 → GrowthPath → 解約 でも可能です。</p>
+      <p>請求期間の終了日まではプレミアム特典が継続します。</p>
+    </details>
+
+    <details>
+      <summary>解約したのにまだプレミアム会員と表示される</summary>
+      <p>解約は次回の課金日に有効になります。それまでは引き続きプレミアム特典が使えます。期間が終わると、GrowthPath が次回起動時に自動検知し、無料プランに戻ります。</p>
+    </details>
+
+    <details>
+      <summary>別の端末で購入したプレミアムを引き継ぎたい</summary>
+      <p><strong>設定 → 現在のプラン → 機種変更・再インストールの方はこちら</strong> をタップしてください。元の購入時と同じ Google / Apple アカウントでログインしている必要があります。</p>
+    </details>
+
+    <h2>機能について</h2>
+
+    <details>
+      <summary>複数のお子様 (兄弟姉妹) を記録できる?</summary>
+      <p>はい。最大 5 人までお子様プロフィールを登録できます。それぞれのお子様ごとに誕生日・写真・アルバムが分かれて管理されます。</p>
+    </details>
+
+    <details>
+      <summary>GrowthPath 以外で撮った写真もインポートできる?</summary>
+      <p>はい。ホーム画面の「アルバムから作成する」をタップすると、端末の写真ライブラリから任意の写真・動画をインポートできます。同じ焼き込みデザインが適用されます。</p>
+    </details>
+
+    <details>
+      <summary>写真のシェアはどうする?</summary>
+      <p>アルバムから写真を開き、シェアアイコンをタップして送信先 (Instagram ストーリー、X、メッセージ等) を選択してください。焼き込みデザインを保ったままシェアされます。</p>
+    </details>
+
+    <h2>トラブルシューティング</h2>
+
+    <details>
+      <summary>カメラが起動しない・真っ黒な画面になる</summary>
+      <p>カメラの権限が許可されているかご確認ください: <strong>設定 → アプリ → GrowthPath → 権限 → カメラ → 許可</strong>。それでも解決しない場合は、アプリを再起動するか端末を再起動してください。</p>
+    </details>
+
+    <details>
+      <summary>保存時にアプリが落ちる</summary>
+      <p>端末の空き容量不足が原因のことが多いです。500 MB 以上の空き容量を確保してから再度お試しください。それでも改善しない場合はサポートまでお問い合わせください。</p>
+    </details>
+
+    <details>
+      <summary>表示言語を日本語/英語で切り替えたい</summary>
+      <p>GrowthPath は端末の言語設定に追従します。切り替えるには、端末の言語を変更してください: <strong>設定 → システム → 言語と入力 → 言語を English (または 日本語) に変更</strong>。その後 GrowthPath を再起動すると反映されます。</p>
+    </details>
+
+    <h2>お問い合わせ</h2>
+
+    <details>
+      <summary>ここに書かれていない質問がある</summary>
+      <p><a href="mailto:omuka.customercenter@gmail.com">omuka.customercenter@gmail.com</a> までご連絡ください。数営業日以内にお返事いたします。</p>
+    </details>
+  </section>
+
+  <footer>
+    © 2026 GrowthPath
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.getElementById('lang-en').classList.remove('active');
+      document.getElementById('lang-ja').classList.remove('active');
+      document.getElementById('btn-en').classList.remove('active');
+      document.getElementById('btn-ja').classList.remove('active');
+      document.getElementById('lang-' + lang).classList.add('active');
+      document.getElementById('btn-' + lang).classList.add('active');
+      document.documentElement.lang = lang;
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+    }
+    (function () {
+      let saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      const initial = saved
+        || (navigator.language && navigator.language.startsWith('ja') ? 'ja' : 'en');
+      setLang(initial);
+    })();
+  </script>
+</body>
+</html>
